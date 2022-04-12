@@ -6,5 +6,5 @@
 xrandr --output HDMI-1 --primary --mode 3840x2160
 
 # change this URL
-@chromium-browser --kiosk <YOUR-URL> -force-device-scale-factor=1.5
+@chromium-browser --kiosk <YOUR-URL> -force-device-scale-factor=2
 
