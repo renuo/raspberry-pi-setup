@@ -9,3 +9,12 @@ Always plug in at HDMI 1
 Change hostname in: `/etc/hosts` and `/etc/hostname`
 
 IP-Adress and passwort in 1Password
+
+
+## Install
+
+```
+git clone https://github.com/renuo/raspberry-pi-setup.git
+cp -R raspberry-pi-setup/config/lxsession/ .config
+```
+
