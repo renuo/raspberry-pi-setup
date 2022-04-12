@@ -16,6 +16,8 @@ IP-Adress and passwort in 1Password
 ```
 # Install Emoticons: 
 curl https://gist.githubusercontent.com/luminousmen/7ba2f1f672213a396e8c42a3802348df/raw/434c8ef6bad8bb0df8c794bf598021eef7eebc7c/ubuntu-chrome-emoji.sh | bash 
+
+# Clone repo
 git clone https://github.com/renuo/raspberry-pi-setup.git
 cp -R raspberry-pi-setup/config/lxsession/ .config
 ```
