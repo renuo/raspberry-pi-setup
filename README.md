@@ -27,3 +27,5 @@ Unplug it from the TV and back in or `ssh pi@FIND-IP-IN-1PASSWORD sudo shutdown 
 ### If the Raspberry Pi do not start
 Unplug it from the TV and plug it in via HDMI 1 to another monitor. You can also plug in a keyboard and optional a mouse. When the Pi is started, you can exit the full screen with right click and click “exit full screen”. After that, you can start the terminal.
 
+### Change your URL 
+```@chromium-browser --kiosk <YOUR-URL> -force-device-scale-factor=2```
