@@ -1,4 +1,6 @@
-# raspberry-pi-setup
+# 🖥 Raspberry PI Setup for Renuo Office Dashboard
+_Or the big screen at the office entrance_
+
 Setup for Raspberry Pi
 
 ## Plug in 
