@@ -1,9 +1,9 @@
-xrandr --output HDMI-1 --primary --mode 3840x2160
-
 # copied from /etc/xdg/lxsession/LXDE-pi/autostart
 @lxpanel --profile LXDE-pi
 @pcmanfm --desktop --profile LXDE-pi
 @xscreensaver -no-splash
+
+xrandr --output HDMI-1 --primary --mode 3840x2160
 
 # change this URL
 @chromium-bowser --kiosk <YOUR-URL> -force-device-scale-factor=1.5
