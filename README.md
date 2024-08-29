@@ -27,6 +27,12 @@ cp -R raspberry-pi-setup/config/lxsession/ .config
 # --> Replace now the url in .config/lxsession/LXDE-pi/autostart
 ```
 
+### Use x11 instead of wayland
+
+Use the raspi-config to update the window manager:
+
+https://www.geeks3d.com/20240509/how-to-switch-from-wayland-to-x11-on-raspberry-pi-os-bookworm/
+
 ## Troubleshooting
 
 ### If only, there is no menu
@@ -44,3 +50,4 @@ by changing this line
 ```
 @chromium-browser --kiosk <YOUR-URL> -force-device-scale-factor=<SCALING-FACTOR>
 ```
+
