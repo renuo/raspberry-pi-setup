@@ -1,10 +1,11 @@
-# copied from /etc/xdg/lxsession/LXDE-pi/autostart
-@lxpanel --profile LXDE-pi
-@pcmanfm --desktop --profile LXDE-pi
-@xscreensaver -no-splash
+#!/bin/sh
 
-xrandr --output HDMI-1 --primary --mode 3840x2160
+@xset s 0 0
+@xset s noblank
+@xset s noexpose
 
-# change this URL
-@chromium-browser --kiosk <YOUR-URL> -force-device-scale-factor=2
+xscreensaver -no-splash
+xrandr --output XWAYLAND0 --primary --mode 3840x2160
 
+# Change this
+chromium-browser --kiosk https://dashboard.renuo.ch/monitor?secret=SECRET_ON_1PASSWORD -force-device-scale-factor=2
