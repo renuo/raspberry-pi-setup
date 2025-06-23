@@ -51,3 +51,37 @@ by changing this line
 @chromium-browser --kiosk <YOUR-URL> -force-device-scale-factor=<SCALING-FACTOR>
 ```
 
+# Entrance Monitor
+
+Runs Chomium in a restart loop.
+Kills it every 5min.
+
+```
+# /home/pi/.config/lxsession/LXDE-pi/autostart
+#!/bin/sh
+
+@xset s 0 0
+@xset s noblank
+@xset s noexpose
+xscreensaver -no-splash
+xrandr --output XWAYLAND0 --primary --mode 3840x2160
+DISPLAY=:0 unclutter -idle 0 -root &
+
+@/home/pi/kiosk.sh
+```
+
+```
+# /home/pi/kiosk.sh
+#!/bin/bash
+
+while true; do
+  chromium-browser --kiosk \
+    "<YOUR-URL>/pub?start=true&loop=true&delayms=5000&slide=<FIRST_SLIDE>"
+  sleep 2
+done
+```
+
+```
+# crontab -e
+*/5 * * * * pkill -HUP chromium
+```
