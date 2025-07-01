@@ -3,6 +3,10 @@ _Or the big screen at the office entrance_
 
 Setup for Raspberry Pi
 
+## WiFi
+
+Please make sure you are connected to the 5 GHz frequency, and not 2.4 GHz. Also make sure the resolution is 1920x1080, since that impacts the speed of WiFi.
+
 ## Plug in 
 Always plug in at HDMI 1
 
