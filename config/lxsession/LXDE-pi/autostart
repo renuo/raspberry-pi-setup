@@ -5,7 +5,7 @@
 @xset s noexpose
 
 xscreensaver -no-splash
-xrandr --output XWAYLAND0 --primary --mode 3840x2160
+xrandr --output XWAYLAND0 --primary --mode 1920x1080
 
 # Change this
 chromium-browser --kiosk https://dashboard.renuo.ch/monitor?secret=SECRET_ON_1PASSWORD -force-device-scale-factor=2
