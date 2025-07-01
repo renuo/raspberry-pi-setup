@@ -25,6 +25,9 @@ git clone https://github.com/renuo/raspberry-pi-setup.git
 # Override configs
 cp -R raspberry-pi-setup/config/lxsession/ .config
 # --> Replace now the url in .config/lxsession/LXDE-pi/autostart
+
+# Set boot config
+sudo cp raspberry-pi-setup/boot/firmware/config.txt /boot/firmware/config.txt
 ```
 
 ### Use x11 instead of wayland
