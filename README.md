@@ -61,7 +61,7 @@ by changing this line
 # Entrance Monitor
 
 Runs Chomium in a restart loop.
-Kills it every 5min.
+Reloads it every 5min.
 
 ```
 # /home/pi/.config/lxsession/LXDE-pi/autostart
@@ -90,5 +90,5 @@ done
 
 ```
 # crontab -e
-*/5 * * * * pkill -HUP chromium
+*/5 * * * *          DISPLAY=:0.0 xdotool key F5
 ```
