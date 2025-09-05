@@ -92,3 +92,31 @@ done
 # crontab -e
 */5 * * * *          DISPLAY=:0.0 xdotool key F5
 ```
+
+## Changing code
+
+The raspberry pi is in read only mode thanks to overlayFs. If you want to make changes to anything(settings, scripts, etc.) you will need to disable overlayFS. You can do this after you SSH into the raspberry.
+
+First you will need to open the config gui with:
+```
+sudo raspi-config
+```
+
+There you will go to the performance tab and disable the Overlay File system. Reboot the raspi with 
+```
+sudo reboot
+```
+
+Afterwards you can SSH into it again and make your changes. Don't forget to enable overlayFs again after you made you changes as shutting down the raspi incorrectly would lead to data corruption otherwise.
+
+## Songs
+
+The songs which are played when pressing the button are stored on [Google drive](https://drive.google.com/drive/folders/10stn3i1LZsxPFS9V6kx0v5ma3RJS8Yqz)
+
+If you name a song lunch.mp3 it will be played at lunch time. Otherwise they will be played on random.
+The song script is saved in the home/pi folder. it is called script.py if you want to make changes.
+
+Adding a new song to the folder will not make it available immediatly. The raspberry will only fetch the songs when it gets turned on. So if you want to make the songs available immediatly, reboot the device.
+
+Changes to the fetching allgorithm can be made in the etc/systemd/system/fetch-songs.service
+
