@@ -42,6 +42,22 @@ Use the raspi-config to update the window manager:
 
 https://www.geeks3d.com/20240509/how-to-switch-from-wayland-to-x11-on-raspberry-pi-os-bookworm/
 
+## Changing code
+
+The raspberry pis are in read only mode thanks to overlayFs. If you want to make changes to anything(settings, scripts, etc.) you will need to disable overlayFS. You can do this after you SSH into the raspberry.
+
+First you will need to open the config gui with:
+```
+sudo raspi-config
+```
+
+There you will go to the performance tab and disable the Overlay File system. Reboot the raspi with
+```
+sudo reboot
+```
+
+Afterwards you can SSH into it again and make your changes. Don't forget to enable overlayFs again after you made you changes as shutting down the raspi incorrectly would lead to data corruption otherwise.
+
 ## Troubleshooting
 
 ### If only, there is no menu
@@ -104,22 +120,6 @@ done
 # crontab -e
 */5 * * * *          DISPLAY=:0.0 xdotool key F5
 ```
-
-## Changing code
-
-The raspberry pi is in read only mode thanks to overlayFs. If you want to make changes to anything(settings, scripts, etc.) you will need to disable overlayFS. You can do this after you SSH into the raspberry.
-
-First you will need to open the config gui with:
-```
-sudo raspi-config
-```
-
-There you will go to the performance tab and disable the Overlay File system. Reboot the raspi with 
-```
-sudo reboot
-```
-
-Afterwards you can SSH into it again and make your changes. Don't forget to enable overlayFs again after you made you changes as shutting down the raspi incorrectly would lead to data corruption otherwise.
 
 ## Songs
 
