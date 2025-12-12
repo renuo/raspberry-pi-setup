@@ -1,4 +1,4 @@
-# 🖥 Raspberry Pi Setup for Renuo Office Entrance Monitor
+# 🖥 Raspberry Pi Setup for Renuo Entrance and Big Monitor Screen
 
 Setup for Raspberry Pi
 
