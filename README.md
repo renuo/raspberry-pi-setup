@@ -6,6 +6,10 @@ Setup for Raspberry Pi
 
 Please make sure you are connected to the 5 GHz frequency, and not 2.4 GHz. Also make sure the resolution is 1920x1080, since that impacts the speed of WiFi.
 
+The Raspberry Pis have static IP addresses assigned. If you mess with the
+network configuration you need to make sure to not break this. See
+<http://192.168.100.1/webfig/#IP:DHCP_Server.Leases>
+
 ## Plug in 
 Always plug in at HDMI 1
 
