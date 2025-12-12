@@ -13,10 +13,7 @@ Always plug in at HDMI 1
 
 Change hostname in: `/etc/hosts` and `/etc/hostname`
 
-`ssh pi@raspberrypi-entrance.local`
-
 IP Address and password in 1Password
-
 
 ## Install
 
@@ -60,6 +57,10 @@ by changing this line
 ```
 
 # Entrance Monitor
+
+```
+ssh pi@raspberrypi-entrance.lan.renuo.ch
+```
 
 Runs Chomium in a restart loop.
 Reloads it every 5min.
