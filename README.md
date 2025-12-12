@@ -60,6 +60,12 @@ by changing this line
 @chromium-browser --kiosk <YOUR-URL> -force-device-scale-factor=<SCALING-FACTOR>
 ```
 
+# Big Monitor
+
+```
+ssh pi@raspberrypi-big-monitor.lan.renuo.ch
+```
+
 # Entrance Monitor
 
 ```
