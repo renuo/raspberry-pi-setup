@@ -13,6 +13,8 @@ Always plug in at HDMI 1
 
 Change hostname in: `/etc/hosts` and `/etc/hostname`
 
+`ssh pi@raspberrypi-entrance.local`
+
 IP Address and password in 1Password
 
 
