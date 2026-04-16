@@ -44,19 +44,29 @@ https://www.geeks3d.com/20240509/how-to-switch-from-wayland-to-x11-on-raspberry-
 
 ## Changing code
 
-The raspberry pis are in read only mode thanks to overlayFs. If you want to make changes to anything(settings, scripts, etc.) you will need to disable overlayFS. You can do this after you SSH into the raspberry.
-
-First you will need to open the config gui with:
+The raspberry pis are in read only mode thanks to overlayFs. If you want to
+make changes to anything(settings, scripts, etc.) you will need to disable
+overlayFS. You can do this after you SSH into the raspberry:
 ```
-sudo raspi-config
+sudo raspi-config nonint disable_overlayfs
 ```
 
-There you will go to the performance tab and disable the Overlay File system. Reboot the raspi with
+If you want to update the system you will need to make `/boot/` writable as well:
+```
+sudo raspi-config nonint disable_bootro
+```
+
 ```
 sudo reboot
 ```
 
-Afterwards you can SSH into it again and make your changes. Don't forget to enable overlayFs again after you made you changes as shutting down the raspi incorrectly would lead to data corruption otherwise.
+Afterwards you can SSH into it again and make your changes. Don't forget to
+enable overlayFs again after you made you changes as shutting down the raspi
+incorrectly would lead to data corruption otherwise:
+```
+sudo raspi-config nonint enable_bootro
+sudo raspi-config nonint enable_overlayfs
+```
 
 ## Troubleshooting
 
